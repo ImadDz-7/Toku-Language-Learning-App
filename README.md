@@ -1,16 +1,10 @@
-# toku_app
+# Toku App
 
-A new Flutter project.
+Toku is a mobile language learning application built with Flutter. It's designed to help you learn Japanese in a fun and engaging way. Currently, Toku focuses on teaching the following categories:
 
-## Getting Started
+* **Numbers:** Learn to count in Japanese.
+* **Colors:** Discover the names of various colors in Japanese.
+* **Family Members:** Familiarize yourself with Japanese terms for family members.
+* **Phrases:** Pick up useful everyday Japanese phrases.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Stay tuned for future updates as we plan to expand the app with more vocabulary, grammar lessons, and interactive features!
