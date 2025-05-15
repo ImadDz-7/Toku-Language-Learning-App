@@ -12,9 +12,28 @@ class TokuApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: const Color(0xFFFEF6DB),
         appBar: AppBar(
           title: const Text('Toku'),
           backgroundColor: const Color(0xFF46322B),
+        ),
+        body: Column(
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              padding: const EdgeInsets.only(left: 16),
+              width: double.infinity,
+              height: 65,
+              color: Colors.orange,
+              child: const Text(
+                'Numbers',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
