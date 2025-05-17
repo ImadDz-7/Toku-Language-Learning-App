@@ -15,6 +15,9 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Category(
+            onTap: (){
+              print('Numbers tapped');
+            },
             title: 'Numbers',
             color: Color(0xFFEF9235),
           ),
