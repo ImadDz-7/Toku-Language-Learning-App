@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/category_item.dart';
+import 'package:toku_app/screens/numbers_screen.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,8 +16,15 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: [
           Category(
-            onTap: (){
-              print('Numbers tapped');
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return NumbersScreen();
+                  },
+                ),
+              );
             },
             title: 'Numbers',
             color: Color(0xFFEF9235),
