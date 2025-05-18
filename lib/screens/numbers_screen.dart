@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/components/item.dart';
 
 import '../models/number.dart';
 
@@ -10,6 +11,11 @@ class NumbersScreen extends StatelessWidget {
     jpName: 'Ichi',
     enName: 'One',
   );
+  final Number two = const Number(
+    image: 'assets/images/numbers/number_two.png',
+    jpName: 'Ni',
+    enName: 'Two',
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -18,49 +24,15 @@ class NumbersScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF46322B),
         title: const Text('Numbers'),
       ),
-      body: Container(
-        height: 80,
-        color: const Color(0xFFEF9235),
-        child: Row(
-          children: [
-            Container(
-              margin: const EdgeInsets.only(right: 16),
-              color: const Color(0xFFFFF6DC),
-              child: Image.asset(one.image),
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  one.jpName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-                Text(
-                  one.enName,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                  ),
-                ),
-              ],
-            ),
-            Spacer(flex: 1),
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 28,
-              ),
-            ),
-          ],
-        ),
+      body: Column(
+        children: [
+          Item(number: one),
+          Item(number: two),
+          Item(number: one),
+          Item(number: two),
+          Item(number: one),
+        ],
       ),
     );
   }
 }
-
-
