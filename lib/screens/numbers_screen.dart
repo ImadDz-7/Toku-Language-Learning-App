@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../models/number.dart';
+
 class NumbersScreen extends StatelessWidget {
   const NumbersScreen({super.key});
 
@@ -61,14 +63,4 @@ class NumbersScreen extends StatelessWidget {
   }
 }
 
-class Number {
-  final String image;
-  final String jpName;
-  final String enName;
 
-  const Number({
-    required this.image,
-    required this.jpName,
-    required this.enName,
-  });
-}
