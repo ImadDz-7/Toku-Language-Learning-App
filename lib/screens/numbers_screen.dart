@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 class NumbersScreen extends StatelessWidget {
   const NumbersScreen({super.key});
 
+  final Number one = const Number(
+    image: 'assets/images/numbers/number_one.png',
+    jpName: 'Ichi',
+    enName: 'One',
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,27 +18,27 @@ class NumbersScreen extends StatelessWidget {
       ),
       body: Container(
         height: 80,
-        color: Color(0xFFEF9235),
+        color: const Color(0xFFEF9235),
         child: Row(
           children: [
             Container(
               margin: const EdgeInsets.only(right: 16),
-              color: Color(0xFFFFF6DC),
-              child: Image.asset('assets/images/numbers/number_one.png'),
+              color: const Color(0xFFFFF6DC),
+              child: Image.asset(one.image),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
-                  'Ichi',
-                  style: TextStyle(
+                Text(
+                  one.jpName,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),
                 ),
-               const Text(
-                  'One',
-                  style: TextStyle(
+                Text(
+                  one.enName,
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                   ),
@@ -53,4 +59,16 @@ class NumbersScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+class Number {
+  final String image;
+  final String jpName;
+  final String enName;
+
+  const Number({
+    required this.image,
+    required this.jpName,
+    required this.enName,
+  });
 }
