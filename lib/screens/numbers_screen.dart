@@ -49,12 +49,12 @@ class NumbersScreen extends StatelessWidget {
     ),
     Number(
       image: 'assets/images/numbers/number_nine.png',
-      jpName: 'Ichi',
+      jpName: 'Kyu',
       enName: 'Nine',
     ),
     Number(
       image: 'assets/images/numbers/number_ten.png',
-      jpName: 'Ichi',
+      jpName: 'Ju',
       enName: 'Ten',
     ),
   ];
@@ -67,19 +67,18 @@ class NumbersScreen extends StatelessWidget {
         title: const Text('Numbers'),
       ),
       body: ListView(
-        children: [
-          Item(number: numbers[0]),
-          Item(number: numbers[1]),
-          Item(number: numbers[2]),
-          Item(number: numbers[3]),
-          Item(number: numbers[4]),
-          Item(number: numbers[5]),
-          Item(number: numbers[6]),
-          Item(number: numbers[7]),
-          Item(number: numbers[8]),
-          Item(number: numbers[9]),
-        ],
+        children: getList(numbers),
       ),
     );
+  }
+
+  List<Widget> getList(List<Number> numbers) {
+    List<Widget> itemsList = [];
+    for (int i = 0; i < numbers.length; i++) {
+      itemsList.add(
+        Item(number: numbers[i]),
+      );
+    }
+    return itemsList;
   }
 }
