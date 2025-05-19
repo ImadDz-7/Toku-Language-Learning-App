@@ -66,8 +66,11 @@ class NumbersScreen extends StatelessWidget {
         backgroundColor: const Color(0xFF46322B),
         title: const Text('Numbers'),
       ),
-      body: ListView(
-        children: getList(numbers),
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (context, index) {
+          return Item(number: numbers[index]);
+        },
       ),
     );
   }
