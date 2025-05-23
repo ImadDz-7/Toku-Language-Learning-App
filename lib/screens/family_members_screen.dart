@@ -3,8 +3,8 @@ import 'package:toku_app/components/item.dart';
 
 import '../models/number.dart';
 
-class NumbersScreen extends StatelessWidget {
-  const NumbersScreen({
+class FamilyMembersScreen extends StatelessWidget {
+  const FamilyMembersScreen({
     super.key,
     required this.color,
   });
@@ -79,7 +79,7 @@ class NumbersScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFF46322B),
-        title: const Text('Numbers'),
+        title: const Text('Family Members'),
       ),
       body: ListView.builder(
         itemCount: numbers.length,
