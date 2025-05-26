@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/item.dart';
+import 'package:toku_app/components/phrases_item.dart';
 
 import '../models/item_model.dart';
 
@@ -84,7 +85,7 @@ class PhrasesScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: numbers.length,
         itemBuilder: (context, index) {
-          return Item(
+          return PhrasesItem(
             color: color,
             number: numbers[index],
           );
