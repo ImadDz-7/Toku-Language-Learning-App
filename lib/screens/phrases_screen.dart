@@ -12,7 +12,7 @@ class PhrasesScreen extends StatelessWidget {
 
   final Color color;
 
-  final List<ItemModel> numbers = const [
+  final List<ItemModel> phrases = const [
     ItemModel(
       image: 'assets/images/numbers/number_one.png',
       jpName: 'Ichi',
@@ -83,11 +83,11 @@ class PhrasesScreen extends StatelessWidget {
         title: const Text('Phrases'),
       ),
       body: ListView.builder(
-        itemCount: numbers.length,
+        itemCount: phrases.length,
         itemBuilder: (context, index) {
           return PhrasesItem(
             color: color,
-            number: numbers[index],
+            number: phrases[index],
           );
         },
       ),
