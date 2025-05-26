@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/category_item.dart';
+import 'package:toku_app/screens/colors_screen.dart';
 import 'package:toku_app/screens/family_members_screen.dart';
 import 'package:toku_app/screens/numbers_screen.dart';
 import 'package:toku_app/screens/phrases_screen.dart';
@@ -23,7 +24,7 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (BuildContext context) {
-                    return NumbersScreen(
+                    return const NumbersScreen(
                       color: Color(0xFFEF9235),
                     );
                   },
@@ -31,7 +32,7 @@ class HomePage extends StatelessWidget {
               );
             },
             title: 'Numbers',
-            color: Color(0xFFEF9235),
+            color: const Color(0xFFEF9235),
           ),
           Category(
             onTap: () {
@@ -47,11 +48,16 @@ class HomePage extends StatelessWidget {
               );
             },
             title: 'Family Members',
-            color: Color(0xFF558B37),
+            color: const Color(0xFF558B37),
           ),
           Category(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context){
+                return const ColorsScreen(color: Color(0xFF79359F));
+              },),);
+            },
             title: 'Colors',
-            color: Color(0xFF79359F),
+            color: const Color(0xFF79359F),
           ),
           Category(
             onTap: () {
@@ -65,7 +71,7 @@ class HomePage extends StatelessWidget {
               );
             },
             title: 'Phrases',
-            color: Color(0xFF50ADC7),
+            color: const Color(0xFF50ADC7),
           ),
         ],
       ),
