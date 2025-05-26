@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/item.dart';
 
-import '../models/number.dart';
+import '../models/item_model.dart';
 
 class FamilyMembersScreen extends StatelessWidget {
   const FamilyMembersScreen({
@@ -11,62 +11,62 @@ class FamilyMembersScreen extends StatelessWidget {
 
   final Color color;
 
-  final List<Number> numbers = const [
-    Number(
-      image: 'assets/images/numbers/number_one.png',
+  final List<ItemModel> familyMembers = const [
+    ItemModel(
+      image: 'assets/images/family_members/family_father.png',
       jpName: 'Ichi',
       enName: 'One',
-      sound: 'sounds/numbers/number_one_sound.mp3',
+      sound: 'sounds/family_members/father.wav',
     ),
-    Number(
-      image: 'assets/images/numbers/number_two.png',
+    ItemModel(
+      image: 'assets/images/family_members/family_mother.png',
       jpName: 'Ni',
       enName: 'Two',
-      sound: 'sounds/numbers/number_two_sound.mp3',
+      sound: 'sounds/family_members/mother.wav',
     ),
-    Number(
-      image: 'assets/images/numbers/number_three.png',
+    ItemModel(
+      image: 'assets/images/family_members/family_daughter.png',
       jpName: 'San',
       enName: 'Three',
-      sound: 'sounds/numbers/number_three_sound.mp3',
+      sound: 'sounds/family_members/daughter.wav',
     ),
-    Number(
-      image: 'assets/images/numbers/number_four.png',
+    ItemModel(
+      image: 'assets/images/family_members/family_son.png',
       jpName: 'Shi',
       enName: 'Four',
-      sound: 'sounds/numbers/number_four_sound.mp3',
+      sound: 'sounds/family_members/son.wav',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_five.png',
       jpName: 'Go',
       enName: 'Five',
       sound: 'sounds/numbers/number_five_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_six.png',
       jpName: 'Roku',
       enName: 'Six',
       sound: 'sounds/numbers/number_six_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_seven.png',
       jpName: 'Sebun',
       enName: 'Seven',
       sound: 'sounds/numbers/number_seven_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_eight.png',
       jpName: 'Hachi',
       enName: 'Eight',
       sound: 'sounds/numbers/number_eight_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_nine.png',
       jpName: 'Kyu',
       enName: 'Nine',
       sound: 'sounds/numbers/number_nine_sound.mp3',
     ),
-    Number(
+    ItemModel(
       image: 'assets/images/numbers/number_ten.png',
       jpName: 'Ju',
       enName: 'Ten',
@@ -82,11 +82,11 @@ class FamilyMembersScreen extends StatelessWidget {
         title: const Text('Family Members'),
       ),
       body: ListView.builder(
-        itemCount: numbers.length,
+        itemCount: familyMembers.length,
         itemBuilder: (context, index) {
           return Item(
             color: color,
-            number: numbers[index],
+            number: familyMembers[index],
           );
         },
       ),

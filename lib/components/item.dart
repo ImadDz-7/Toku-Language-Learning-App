@@ -1,14 +1,14 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-import '../models/number.dart';
+import '../models/item_model.dart';
 
 class Item extends StatelessWidget {
   const Item({
     required this.number,
     required this.color,
   });
-  final Number number;
+  final ItemModel number;
   final Color color;
 
   @override
