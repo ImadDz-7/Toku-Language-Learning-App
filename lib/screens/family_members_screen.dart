@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toku_app/components/item.dart';
+import 'package:toku_app/constants.dart';
 
 import '../models/item_model.dart';
 
@@ -11,68 +12,7 @@ class FamilyMembersScreen extends StatelessWidget {
 
   final Color color;
 
-  final List<ItemModel> familyMembers = const [
-    ItemModel(
-      image: 'assets/images/family_members/family_father.png',
-      jpName: 'Ichi',
-      enName: 'One',
-      sound: 'sounds/family_members/father.wav',
-    ),
-    ItemModel(
-      image: 'assets/images/family_members/family_mother.png',
-      jpName: 'Ni',
-      enName: 'Two',
-      sound: 'sounds/family_members/mother.wav',
-    ),
-    ItemModel(
-      image: 'assets/images/family_members/family_daughter.png',
-      jpName: 'San',
-      enName: 'Three',
-      sound: 'sounds/family_members/daughter.wav',
-    ),
-    ItemModel(
-      image: 'assets/images/family_members/family_son.png',
-      jpName: 'Shi',
-      enName: 'Four',
-      sound: 'sounds/family_members/son.wav',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_five.png',
-      jpName: 'Go',
-      enName: 'Five',
-      sound: 'sounds/numbers/number_five_sound.mp3',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_six.png',
-      jpName: 'Roku',
-      enName: 'Six',
-      sound: 'sounds/numbers/number_six_sound.mp3',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_seven.png',
-      jpName: 'Sebun',
-      enName: 'Seven',
-      sound: 'sounds/numbers/number_seven_sound.mp3',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_eight.png',
-      jpName: 'Hachi',
-      enName: 'Eight',
-      sound: 'sounds/numbers/number_eight_sound.mp3',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_nine.png',
-      jpName: 'Kyu',
-      enName: 'Nine',
-      sound: 'sounds/numbers/number_nine_sound.mp3',
-    ),
-    ItemModel(
-      image: 'assets/images/numbers/number_ten.png',
-      jpName: 'Ju',
-      enName: 'Ten',
-      sound: 'sounds/numbers/number_ten_sound.mp3',
-    ),
-  ];
+  final List<ItemModel> familyMembers = kFamilyMembersList;
 
   @override
   Widget build(BuildContext context) {

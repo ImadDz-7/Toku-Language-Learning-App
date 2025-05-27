@@ -21,7 +21,7 @@ class Item extends StatelessWidget {
         children: [
           Container(
             color: const Color(0xFFFFF6DC),
-            child: Image.asset(number.image),
+            child: Image.asset(number.image!),
           ),
           Expanded(
             child: ItemInfo(number: number),
